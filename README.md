@@ -74,12 +74,12 @@ $g^*(x)=1-g(x^c)$, let $I_i(f)$ be the probability that flipping coordinate
 $i$ changes $f$, and write $\widehat g(S)$ for the uniformly normalized
 Fourier–Walsh coefficient. Theorem 1.2 is
 
-$$
+```math
 \sum_{\varnothing\ne S}\widehat g(S)^2\max_{i\in S} I_i(f)
 \;\leq\;
-\frac{2\,\mathrm{Cov}(f,g)\,\mathrm{Cov}(f,g^*)}
-{\mathrm{Cov}(f,g)+\mathrm{Cov}(f,g^*)},
-$$
+\frac{2\,\mathrm{Cov}(f,g)\,\mathrm{Cov}(f,g^{*})}
+{\mathrm{Cov}(f,g)+\mathrm{Cov}(f,g^{*})},
+```
 
 with value zero when the denominator vanishes. Its Lean declaration is
 `sharp_correlation`.
