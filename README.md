@@ -77,8 +77,8 @@ Fourier–Walsh coefficient. Theorem 1.2 is
 $$
 \sum_{\varnothing\ne S}\widehat g(S)^2\max_{i\in S} I_i(f)
 \;\leq\;
-\frac{2\,\operatorname{Cov}(f,g)\,\operatorname{Cov}(f,g^*)}
-{\operatorname{Cov}(f,g)+\operatorname{Cov}(f,g^*)},
+\frac{2\,\mathrm{Cov}(f,g)\,\mathrm{Cov}(f,g^*)}
+{\mathrm{Cov}(f,g)+\mathrm{Cov}(f,g^*)},
 $$
 
 with value zero when the denominator vanishes. Its Lean declaration is
@@ -99,7 +99,7 @@ with value zero when the denominator vanishes. Its Lean declaration is
    minimizes the quadratic, and [Main](Chvatal/Main.lean) combines the bounds
    to obtain Theorem 1.2.
 4. **Return to set families.** For antipodal $g=g^*$, Parseval yields
-   $\frac14\min_i I_i(f)\leq\operatorname{Cov}(f,g)$, Corollary 1.3.
+   $\frac14\min_i I_i(f)\leq\mathrm{Cov}(f,g)$, Corollary 1.3.
    [Counting](Chvatal/Counting.lean) translates this into the star bound using
    $f=1-\mathbf 1_D$ and $g=\mathbf 1_B$, where $B$ is a maximal intersecting
    extension of $A$. [Family](Chvatal/Family.lean) proves the required
