@@ -1,0 +1,27 @@
+Mode: macos-development-unsandboxed
+Building Challenge
+WARNING: THIS IS NOT REAL LANDRUN! UNSAFELY RUNNING exec lake build Challenge
+⚠ [946/947] Built Challenge (2.1s)
+warning: Challenge.lean:119:8: declaration uses `sorry`
+warning: Challenge.lean:128:8: declaration uses `sorry`
+warning: Challenge.lean:134:8: declaration uses `sorry`
+warning: Challenge.lean:143:8: declaration uses `sorry`
+warning: Challenge.lean:150:8: declaration uses `sorry`
+warning: Challenge.lean:158:8: declaration uses `sorry`
+warning: Challenge.lean:168:8: declaration uses `sorry`
+warning: Challenge.lean:184:8: declaration uses `sorry`
+warning: Challenge.lean:198:8: declaration uses `sorry`
+Build completed successfully (947 jobs).
+WARNING: THIS IS NOT REAL LANDRUN! UNSAFELY RUNNING exec /Users/hbsv/code/lean/chvatal/.tools/lean4export/.lake/build/bin/lean4export Challenge -- Nat String String.mk Char Quot Quot.mk Quot.lift Quot.ind ChvatalSubmission.chvatal Chvatal.sharp_correlation Chvatal.antipodal_correlation Chvatal.two_spectral_le_quadratic_covariance Chvatal.andFunction_sharp Chvatal.quarter_coefficient_optimal Chvatal.and_or_two_example Chvatal.kleitman_weighted_bound Chvatal.exists_largest_weighted_intersecting_star propext Quot.sound Classical.choice Nat.add Nat.sub Nat.mul Nat.pow Nat.gcd Nat.div Nat.mod Nat.beq Nat.ble Nat.land Nat.lor Nat.xor Nat.shiftLeft Nat.shiftRight String.ofList Char.ofNat List eagerReduce
+Exporting #[Nat, String, String.mk, Char, Quot, Quot.mk, Quot.lift, Quot.ind, ChvatalSubmission.chvatal, Chvatal.sharp_correlation, Chvatal.antipodal_correlation, Chvatal.two_spectral_le_quadratic_covariance, Chvatal.andFunction_sharp, Chvatal.quarter_coefficient_optimal, Chvatal.and_or_two_example, Chvatal.kleitman_weighted_bound, Chvatal.exists_largest_weighted_intersecting_star, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce] from Challenge
+Building Solution
+WARNING: THIS IS NOT REAL LANDRUN! UNSAFELY RUNNING exec lake build Solution
+Build completed successfully (2396 jobs).
+WARNING: THIS IS NOT REAL LANDRUN! UNSAFELY RUNNING exec /Users/hbsv/code/lean/chvatal/.tools/lean4export/.lake/build/bin/lean4export Solution -- Nat String String.mk Char Quot Quot.mk Quot.lift Quot.ind ChvatalSubmission.chvatal Chvatal.sharp_correlation Chvatal.antipodal_correlation Chvatal.two_spectral_le_quadratic_covariance Chvatal.andFunction_sharp Chvatal.quarter_coefficient_optimal Chvatal.and_or_two_example Chvatal.kleitman_weighted_bound Chvatal.exists_largest_weighted_intersecting_star propext Quot.sound Classical.choice Nat.add Nat.sub Nat.mul Nat.pow Nat.gcd Nat.div Nat.mod Nat.beq Nat.ble Nat.land Nat.lor Nat.xor Nat.shiftLeft Nat.shiftRight String.ofList Char.ofNat List eagerReduce
+Exporting #[Nat, String, String.mk, Char, Quot, Quot.mk, Quot.lift, Quot.ind, ChvatalSubmission.chvatal, Chvatal.sharp_correlation, Chvatal.antipodal_correlation, Chvatal.two_spectral_le_quadratic_covariance, Chvatal.andFunction_sharp, Chvatal.quarter_coefficient_optimal, Chvatal.and_or_two_example, Chvatal.kleitman_weighted_bound, Chvatal.exists_largest_weighted_intersecting_star, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce] from Solution
+Running nanoda kernel on solution
+WARNING: THIS IS NOT REAL LANDRUN! UNSAFELY RUNNING exec /Users/hbsv/code/lean/chvatal/.tools/nanoda/target/release/nanoda_bin /var/folders/gg/lqsjg7vd7h531mkscgtwbfb80000gn/T/tmp.6Hg1ss6D
+nanoda kernel accepts the solution
+Running Lean default kernel on solution.
+Lean default kernel accepts the solution
+Your solution is okay!

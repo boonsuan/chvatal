@@ -1,0 +1,199 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/99c678e569c7c4c0772db297c5ddd5e4c9b6322e/schema/formalization.schema.json
+version: "v0.4"
+
+project:
+  name: "A formalization of Chang, Liu, and Liu's proof of Chvátal's conjecture"
+  description: >-
+    A Lean 4 + mathlib formalization of Fan Chang, Hong Liu, and Miao Liu's
+    paper "A proof of Chvátal's conjecture via a sharp correlation inequality"
+    (arXiv:2609.19123v1). It formalizes their star theorem for hereditary set
+    families, sharp Boolean Fourier correlation inequality, antipodal
+    corollary, sharpness results, and weighted strengthening. The formalization
+    was completely prepared by GPT-6.
+  authors: ["Boon Suan Ho"]
+  author_roles:
+    "Boon Suan Ho": >-
+      I prompted GPT-6 through Codex and maintain this repository. I made no
+      mathematical contribution.
+  responsible_maintainers: ["Boon Suan Ho"]
+  license: "MIT"
+
+repository:
+  role: "substantive-development"
+
+classification:
+  arxiv: ["math.CO", "math.PR"]
+  msc2020: ["05D05"]
+
+sources:
+  - title: "A proof of Chvátal's conjecture via a sharp correlation inequality"
+    authors: ["Fan Chang", "Hong Liu", "Miao Liu"]
+    id: "https://arxiv.org/abs/2609.19123v1"
+    type: "paper"
+    relationship: "formalizes"
+    location: >-
+      Theorems 1.1, 1.2, 1.4; Corollary 1.3; Theorem 2.1; Lemmas 3.1 and 3.3;
+      Corollary 3.2; Propositions 4.1, 5.1, and 5.3; Remark 5.2; equations
+      (1)-(18), and the closing signed-Boolean formulation in Section 5.
+    author_endorsement: "other"
+    note: >-
+      The mathematical results and proof belong to the source authors.
+      This project translates their argument into Lean using mathlib. The version-1
+      paper is the fixed target; introductory results merely cited from other
+      works are not additional whole-paper formalization targets. The source
+      retains its arXiv license and its text is not redistributed here.
+
+related_formalizations:
+  - id: "https://github.com/leanprover-community/mathlib4/tree/0df444a360eaa60ab8c11dca51a86af692955474"
+    relationship: "builds-on"
+    note: >-
+      Pinned mathematical library. The development reuses its finite-set,
+      intersecting-family, finite-dimensional inner-product, and Gram-Schmidt
+      results, with the normalizations and reductions needed for the paper
+      proved locally.
+
+status:
+  scope: >-
+    The repository contains the full source-based development, including the
+    numbered results and equations mapped in docs/PaperMap.md. Comparator's
+    compact statement of record selects nine principal declarations: the
+    expanded star theorem (1.1), sharp inequality (1.2), antipodal corollary
+    (1.3), quadratic inequality (1.4), AND equality and coefficient optimality
+    (5.1), numerical counterexample (5.2), and both the weighted bound and
+    weighted maximum-attainment conclusion (5.3). The intermediate results
+    remain proved and axiom-audited in the library; they are not separately
+    selected Comparator claims. Everything is prepared locally.
+  # Deliberate statement-only holes in Challenge.lean are excluded by the schema.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms: ["propext", "Classical.choice", "Quot.sound"]
+  main_results:
+    - declaration: "ChvatalSubmission.chvatal"
+      file: "Solution.lean"
+      sorry_count: 0
+      axioms: ["propext", "Classical.choice", "Quot.sound"]
+      comparator_config: "comparator.json"
+      literature_dependencies: []
+    - declaration: "Chvatal.sharp_correlation"
+      file: "Chvatal/Main.lean"
+      sorry_count: 0
+      axioms: ["propext", "Classical.choice", "Quot.sound"]
+      comparator_config: "comparator.json"
+      literature_dependencies: []
+    - declaration: "Chvatal.antipodal_correlation"
+      file: "Chvatal/Main.lean"
+      sorry_count: 0
+      axioms: ["propext", "Classical.choice", "Quot.sound"]
+      comparator_config: "comparator.json"
+      literature_dependencies: []
+    - declaration: "Chvatal.two_spectral_le_quadratic_covariance"
+      file: "Chvatal/Correlation.lean"
+      sorry_count: 0
+      axioms: ["propext", "Classical.choice", "Quot.sound"]
+      comparator_config: "comparator.json"
+      literature_dependencies: []
+    - declaration: "Chvatal.andFunction_sharp"
+      file: "Chvatal/Sharpness.lean"
+      sorry_count: 0
+      axioms: ["propext", "Classical.choice", "Quot.sound"]
+      comparator_config: "comparator.json"
+      literature_dependencies: []
+    - declaration: "Chvatal.quarter_coefficient_optimal"
+      file: "Chvatal/Sharpness.lean"
+      sorry_count: 0
+      axioms: ["propext", "Classical.choice", "Quot.sound"]
+      comparator_config: "comparator.json"
+      literature_dependencies: []
+    - declaration: "Chvatal.and_or_two_example"
+      file: "Chvatal/Sharpness.lean"
+      sorry_count: 0
+      axioms: ["propext", "Classical.choice", "Quot.sound"]
+      comparator_config: "comparator.json"
+      literature_dependencies: []
+    - declaration: "Chvatal.kleitman_weighted_bound"
+      file: "Chvatal/Weighted.lean"
+      sorry_count: 0
+      axioms: ["propext", "Classical.choice", "Quot.sound"]
+      comparator_config: "comparator.json"
+      literature_dependencies: []
+    - declaration: "Chvatal.exists_largest_weighted_intersecting_star"
+      file: "Chvatal/Weighted.lean"
+      sorry_count: 0
+      axioms: ["propext", "Classical.choice", "Quot.sound"]
+      comparator_config: "comparator.json"
+      literature_dependencies: []
+
+automation:
+  methods:
+    - method: "agent"
+      models: ["GPT-6"]
+      framework: "Codex"
+      tool_setup: >-
+        Local Lean 4.33.1 and pinned mathlib, shell tools, parallel proof
+        development agents, incremental builds, mathlib-style linters,
+        theorem-statement checks, transitive axiom audits, and local Palomar
+        Comparator, Lean replay, and NanoDa tooling.
+      prompting_notes: >-
+        I supplied the source paper and asked GPT-6 to formalize its results
+        with readable Lean code and comments mapping declarations to the
+        paper. I then asked it to prepare the repository locally for Palomar,
+        to make the original authors' mathematical credit explicit, and to
+        disclose that I made no mathematical contribution.
+  notes: >-
+    GPT-6 generated the Lean formalization, scripts, and documentation, using
+    parallel agents where useful. My involvement was prompting, setting
+    requirements, and maintaining the repository. The original mathematical
+    proof is Chang, Liu, and Liu's, not an AI-discovered result from this
+    project. Compilation and kernel replay are mechanical checks, not human
+    mathematical review.
+
+fidelity:
+  divergences: >-
+    The paper's cube is represented by finite subsets of an arbitrary finite
+    coordinate type; Fin n gives its n-dimensional case. Statements requiring
+    a star center, a minimum coordinate, or the maximal-intersecting/antipodal
+    characterization explicitly require a nonempty coordinate type. This
+    states the paper's implicit n >= 1 convention. The main quadratic and
+    harmonic correlation inequalities also hold for zero coordinates.
+    Influence is mean squared flip difference, proved equal to change
+    probability for Boolean functions. The empty-index maximum is zero and
+    contributes nothing to the spectral sum. Lean's zero-denominator division
+    agrees with Theorem 1.2's convention. Proposition 5.3 is first proved for
+    any selector contained in each nonempty index and then specialized to
+    a fixed total-order maximum. Its layer-cake step is a finite positive-level
+    decomposition rather than an integral, with no restriction on real
+    nonnegative decreasing weights. No weakening of the advertised principal
+    statements was identified by the AI-assisted checks. These checks do not
+    establish that every sentence of the informal paper is correct.
+
+review:
+  status: "agent-reviewed"
+  reviewers: ["GPT-6 (Codex agents)"]
+  notes: >-
+    Agents checked correspondence with the source, definitions, normalization,
+    boundary cases, theorem statements, and axiom dependencies. No independent
+    human expert review is claimed. No source-author endorsement or Palomar
+    editorial review is claimed. Observed local verification outcomes and
+    exact tool revisions are recorded in docs/Verification.md and logs/.
+    On macOS the documented Comparator development adapter does not provide
+    Linux process confinement; actual Lean replay and NanoDa still run.
+
+alignment:
+  namespace: "Chvatal"
+  source_map: "docs/PaperMap.md"
+  statement_file: "Challenge.lean"
+  proof_module: "Solution"
+  comparator_config: "comparator.json"
+  note: >-
+    Challenge.lean imports only mathlib and gives concrete definitions with
+    independently readable statements. Its deliberate theorem holes are the
+    Comparator convention. Solution never imports Challenge: it imports the
+    substantive proof library and provides the expanded star-theorem wrapper.
+    Comparator must compare all nine selected declarations and the definitions
+    on which their statements depend.
+
+acknowledgements: >-
+  Full mathematical credit goes to Fan Chang, Hong Liu, and Miao Liu and the
+  mathematical sources they cite. Lean and mathlib and their contributors
+  provide the proof assistant and mathematical infrastructure. Comparator,
+  lean4export, and NanoDa provide the additional checking tools.

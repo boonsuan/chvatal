@@ -1,0 +1,21 @@
+{
+  "challenge_module": "Challenge",
+  "solution_module": "Solution",
+  "theorem_names": [
+    "ChvatalSubmission.chvatal",
+    "Chvatal.sharp_correlation",
+    "Chvatal.antipodal_correlation",
+    "Chvatal.two_spectral_le_quadratic_covariance",
+    "Chvatal.andFunction_sharp",
+    "Chvatal.quarter_coefficient_optimal",
+    "Chvatal.and_or_two_example",
+    "Chvatal.kleitman_weighted_bound",
+    "Chvatal.exists_largest_weighted_intersecting_star"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "enable_nanoda": true
+}

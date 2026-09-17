@@ -1,0 +1,14 @@
+Mode: macos-development-unsandboxed
+Scope: local Comparator comparison and actual Lean/NanoDa checking.
+This is not Palomar intake, editorial review, or registration.
+Status: passed
+Started UTC: 2026-09-17T03:49:04.601340+00:00
+Statement comparison and complete Comparator result: accepted
+NanoDa independent kernel: accepted
+Lean default kernel replay: accepted
+All project proof/build source hashes unchanged: True
+Source manifest SHA256: d65cb0fdadc6a67a2153abfc55845ed27722f9a3f3540eae565c76a5402887ad
+Exit code: 0
+Elapsed seconds: 33.713
+Raw checker output: logs/palomar-output.log
+Tool revisions and binary hashes: logs/palomar-tools.json

@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "project_toolchain": "leanprover/lean4:v4.33.1",
+  "comparator_toolchain": "leanprover/lean4:v4.34.0-rc1",
+  "rust_version": "1.90.0",
+  "go_version": "1.24.0",
+  "repositories": {
+    "comparator": {
+      "url": "https://github.com/leanprover/comparator.git",
+      "commit": "575674928e239f5bc452aab72d1dd7b0f1326494"
+    },
+    "lean4export": {
+      "url": "https://github.com/leanprover/lean4export.git",
+      "commit": "15f6055e299ad5b89345e533cc2192f4cc00f659"
+    },
+    "nanoda": {
+      "url": "https://github.com/robsimmons/nanoda_lib.git",
+      "commit": "68d5ca9db226849b41a6fff59d796ff19d0a8840"
+    },
+    "palomar-submission": {
+      "url": "https://github.com/PalomarRegistry/PalomarSubmission.git",
+      "commit": "ec6064aea91e2f99187f3f46a2652e4d977ce755"
+    }
+  },
+  "landrun": {
+    "module": "github.com/zouuup/landrun/cmd/landrun",
+    "commit": "811cfff51ceaf3d9843708aa6d22e9b84ccac8b4"
+  },
+  "macos_arm64_archives": [
+    {
+      "name": "lean-4.34.0-rc1-darwin_aarch64.tar.zst",
+      "url": "https://github.com/leanprover/lean4/releases/download/v4.34.0-rc1/lean-4.34.0-rc1-darwin_aarch64.tar.zst",
+      "sha256": "ae1f70cd5a72eeb93f8600edfeaed8550b9c9b073f04162ab6d721ab801ed709",
+      "component": "lean"
+    },
+    {
+      "name": "rustc-1.90.0-aarch64-apple-darwin.tar.xz",
+      "url": "https://static.rust-lang.org/dist/rustc-1.90.0-aarch64-apple-darwin.tar.xz",
+      "sha256": "89551c0ba1cc6d0312aebc4a6cafe4497223217ea8e87c81f6afbe127dfaeeb6",
+      "component": "rust"
+    },
+    {
+      "name": "rust-std-1.90.0-aarch64-apple-darwin.tar.xz",
+      "url": "https://static.rust-lang.org/dist/rust-std-1.90.0-aarch64-apple-darwin.tar.xz",
+      "sha256": "c36777aec17d617f85f94b7cb87bdd4270eeca30ef38c6f686809d163c881609",
+      "component": "rust"
+    },
+    {
+      "name": "cargo-1.90.0-aarch64-apple-darwin.tar.xz",
+      "url": "https://static.rust-lang.org/dist/cargo-1.90.0-aarch64-apple-darwin.tar.xz",
+      "sha256": "17a4410a27bf7dad4765f3809265c225f25f8b009da3d4b76cd0927acdae04b5",
+      "component": "rust"
+    }
+  ],
+  "policy": {
+    "url": "https://github.com/PalomarRegistry/PalomarPolicy.git",
+    "commit": "e9c8c238f5695b10f75db7175648a1d0195352c1"
+  },
+  "formalization_schema": {
+    "url": "https://github.com/mathlib-initiative/formalization.yaml.git",
+    "commit": "99c678e569c7c4c0772db297c5ddd5e4c9b6322e",
+    "path": "schema/v0.4.schema.json",
+    "sha256": "25ff6b25ca4511635aff4443cf20480c15e59dddf19591c730950b442ea54fce"
+  }
+}

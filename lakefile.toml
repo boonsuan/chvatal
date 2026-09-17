@@ -1,0 +1,24 @@
+name = "chvatal"
+version = "0.1.0"
+defaultTargets = ["Chvatal", "Solution"]
+lintDriver = "batteries/runLinter"
+lintDriverArgs = ["Chvatal"]
+
+[leanOptions]
+autoImplicit = false
+weak.linter.mathlibStandardSet = true
+weak.linter.style.header.license = "Released under MIT license as described in the file LICENSE."
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "v4.33.1"
+
+[[lean_lib]]
+name = "Chvatal"
+
+[[lean_lib]]
+name = "Challenge"
+
+[[lean_lib]]
+name = "Solution"
