@@ -10,6 +10,9 @@ repository. I made **no mathematical contribution**. The purpose
 is to provide a reproducible Lean formalization that gives readers additional
 confidence in the paper's correctness.
 
+This formalization is registered with Palomar as
+**[PALOMAR-2026-09-17-000004, version 1](https://palomar-registry.org/entry?id=PALOMAR-2026-09-17-000004&version=1)**.
+
 The Lean development and accompanying documentation were generated with GPT-6,
 including parallel agents. Kernel checking verifies the formal proofs; it does
 not by itself establish that the formal statements faithfully express the paper.
